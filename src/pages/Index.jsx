@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Box, Container, Heading, Text, VStack, HStack, Image, Badge, useColorModeValue } from "@chakra-ui/react";
 import { FaBasketballBall } from "react-icons/fa";
 
-// Mock data to simulate incoming updates
 const initialFeed = [
   { id: 1, type: "New Card", description: "LeBron James Dunk Highlight", price: "$200" },
   { id: 2, type: "Price Update", description: "Steph Curry 3-Pointer Card", price: "$180" },
@@ -11,7 +10,6 @@ const initialFeed = [
 const Index = () => {
   const [feed, setFeed] = useState(initialFeed);
 
-  // Simulate dynamic updates
   useEffect(() => {
     const interval = setInterval(() => {
       const newEntry = {
@@ -27,6 +25,8 @@ const Index = () => {
   }, [feed.length]);
 
   const cardBg = useColorModeValue("white", "gray.700");
+
+  
 
   return (
     <Container maxW="container.xl" py={5}>
