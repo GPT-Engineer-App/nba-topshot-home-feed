@@ -4,8 +4,8 @@ import { FaBasketballBall } from "react-icons/fa";
 
 // Mock data to simulate incoming updates
 const initialFeed = [
-  { id: 1, type: "New Card", description: "LeBron James Dunk Highlight", price: "$200" },
-  { id: 2, type: "Price Update", description: "Steph Curry 3-Pointer Card", price: "$180" },
+  { id: 1, type: "New Card", description: "LeBron James Dunk Highlight", price: "$200", timestamp: "2024-04-29T12:00:00Z", details: "Series 5, Card 30" },
+  { id: 2, type: "Price Update", description: "Steph Curry 3-Pointer Card", price: "$180", timestamp: "2024-04-29T12:05:00Z", details: "Series 4, Card 18" },
 ];
 
 const Index = () => {
@@ -45,6 +45,8 @@ const Index = () => {
                   {item.description}
                 </Text>
                 <Text fontSize="md">Price: {item.price}</Text>
+                <Text fontSize="sm">Timestamp: {item.timestamp}</Text>
+                <Text fontSize="sm">Details: {item.details}</Text>
               </VStack>
               <Image borderRadius="full" boxSize="100px" src="https://images.unsplash.com/photo-1653191584476-9b7b47f9a8c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxOQkElMjBwbGF5ZXJ8ZW58MHx8fHwxNzE0NDMwNTYyfDA&ixlib=rb-4.0.3&q=80&w=1080" alt="NBA Player" />
             </HStack>
